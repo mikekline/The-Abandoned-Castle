@@ -146,8 +146,9 @@ span {
   text-decoration: underline;
 }
 
-
-
+.red {
+  color: red;
+}
 
 /**********************artical section what is writen on the scroll********************/
 .title{
