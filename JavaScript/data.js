@@ -2,7 +2,7 @@ const gate = {
     type:"room",
     name:"Front Gate",
     Item:"key",
-    description:"As the large front gates loom before you, you notice a welcome mat. Though the castle is ancient it seams relatively new.",
+    description:"Though the castle is ancient it seams relatively new you think, as the large front gates loom before you. Locked of course! You notice a welcome mat, how nice you think.",
     directions:"You can go north though the gates"
 }
 
@@ -48,4 +48,11 @@ const cave = {
     directions:"You can go west"
 }
 
-export {gate, courtYard, stables, banquet, kitchen, dungeon, cave};
+const inventory = {
+    type:"inventory",
+    name:"inventory",
+    backpack:[" sword", " stick of gum", " latest issue of abandon castles magazine"],
+    description:"Your backpack where you carry all your stuff." 
+}
+
+export {gate, courtYard, stables, banquet, kitchen, dungeon, cave, inventory};

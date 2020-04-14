@@ -146,11 +146,9 @@ span {
   text-decoration: underline;
 }
 
-.red {
-  color: red;
-}
 
-/**********************artical section what is writen on the scroll********************/
+
+/**********************article section what is writen on the scroll********************/
 .title{
   height: 30vh;
   width:22vw;
@@ -167,6 +165,14 @@ article {
   overflow-y: scroll;
   -ms-overflow-style: none; /* used to remove scrollbar in IE 11 */
   scrollbar-width: none; /* used to remove scrollbar in Firefox 64 */
+}
+
+#notifications {
+  color:red;
+}
+
+#items {
+  color: blue;
 }
 
 /* removal of scroll bar to make it look like more like the text is writen on the scroll */

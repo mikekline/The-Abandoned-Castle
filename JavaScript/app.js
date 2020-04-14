@@ -1,12 +1,14 @@
 import * as data from './data.js';
 
 let currentRoom = "road";
+let gate = 0;
 
 
 /*********************************************/
 /*          room navigation               */
 /*********************************************/
 function selectRoom (e) {
+    
   switch (currentRoom){
     /*on the road*/
     case 'road':
@@ -19,10 +21,30 @@ function selectRoom (e) {
     
     /*Front Gate*/
     case 'Front Gate':
-      if (e == "n" || e.keyCode === 78 || e.keyCode === 38){ 
-        document.getElementById('description').innerText = data.courtYard.description;
-        document.getElementById('direction').innerText = data.courtYard.directions;
-        currentRoom = 'Courtyard';
+      const notifications = document.getElementById('notifications');
+      const backpack = data.inventory.backpack;
+
+      /* welcome mat */
+      if (e.keyCode === 80 && !backpack.includes(' keys')){
+        notifications.innerText = "You find keys under the mat and pick them up";
+        reset(notifications);
+        backpack.push(' keys')
+      }else if (e.keyCode === 80 && backpack.includes(' keys') ){
+        notifications.innerText = "You find nothing but dust under the mat.";
+        reset(notifications);
+      } else {
+      /*the gate */
+      if (gate === 0) {
+       notifications.innerText = "The Gate is locked.";
+       reset(notifications);
+       currentRoom = 'Front Gate';
+      }else if (gate === 1) {
+        if (e == "n" || e.keyCode === 78 || e.keyCode === 38){ 
+          document.getElementById('description').innerText = data.courtYard.description;
+          document.getElementById('direction').innerText = data.courtYard.directions;
+          currentRoom = 'Courtyard';
+        }
+      } 
       }
       break;
   
@@ -108,13 +130,47 @@ function selectRoom (e) {
  
 
 
+/*********************************************/
+/*               inventory                   */
+/*********************************************/
+
+function inventory (e) {
+  const inventory = document.getElementById('items');
+  const notifications = document.getElementById('notifications');
+  const backpack = data.inventory.backpack;
+
+  /*display inventory*/ 
+  if (e.keyCode === 73){
+    inventory.innerText = `Inventory: ${backpack}`; 
+    reset(inventory);
+  }
+
+  /*uses key on gate*/
+  if (backpack.includes(' keys') && e.keyCode === 85 && currentRoom === 'Front Gate' ) {
+    gate = 1;
+    notifications.innerText = "You have unlocked the gate and the key has disolved.";
+    reset(notifications);
+    backpack.splice(backpack.indexOf(' keys'), 1 );
+  }
+}
 
 /*********************************************/
 /*          input controllers                */
 /*********************************************/
 
 document.addEventListener('keydown', selectRoom);
+document.addEventListener('keydown', inventory);
 document.querySelector('#north').onclick = function(){selectRoom('n')};
 document.querySelector('#east').onclick = function(){selectRoom('e')};
 document.querySelector('#south').onclick = function(){selectRoom('s')};
 document.querySelector('#west').onclick = function(){selectRoom('w')};
+
+/*********************************************/
+/*                 resets                    */
+/*********************************************/
+
+function reset (element) {
+    setTimeout( function () { 
+        element.innerHTML = '';
+      }, 4000);
+}
