@@ -37,14 +37,14 @@ const kitchen = {
 const dungeon = {
     type:"room",
     name:"Dungeon",
-    description:"Down the stairs you desend into the murky, wet Dungeon. Where prisoners were once kept there is nothing left except for broken bars, chains and a few  skeletons laying about. Behind one of the skeletons there is an opening, that opens to a large cave.",
+    description:"Down the stairs you desend into the murky, wet Dungeon, where prisoners were once kept. There is nothing left except for broken bars, chains and a few  skeletons laying about. Behind one of the skeletons there is an opening, that opens to a large cave.",
     directions:"You can go east, west"
 }
 
 const cave = {
     type:"room",
     name:"Cave",
-    description:"Apon entering the cave, your eyes ajust to the light coming in from the mouth of the cave. It appears the cave opens up over a valley that exteneds to the mountains",
+    description:"Apon entering the cave, your eyes ajust to the light coming in from the mouth of the cave. It appears the cave opens up over a valley that exteneds to the mountains.",
     directions:"You can go west"
 }
 
@@ -55,4 +55,11 @@ const inventory = {
     description:"Your backpack where you carry all your stuff." 
 }
 
-export {gate, courtYard, stables, banquet, kitchen, dungeon, cave, inventory};
+const skeletons = {
+    type:"monster",
+    name:"skeleton",
+    hitpoints:20,
+    items:" 5 gold"
+}
+
+export {gate, courtYard, stables, banquet, kitchen, dungeon, cave, inventory, skeletons};
