@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>The Abandoned Castle</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="./css/main.css" />
-        <link rel="shortcut icon" href="./assets/Iconka-Home-Sweet-Home-Home-Castle.ico" />
-    </head>
-    <body>
-      <main> 
-        <img class="title" src="./assets/title.png"  alt="the abandon castle title">
-        <article id="article">
-          <p id="notifications"></p>
-          <p id="items"></p>
-          <p id="description">
-            The Castle stands eeriely silent as you approach. After many centuries 
-            thecastle has sparked many legends. Most have never retunred, those that have speak of horors and riches. 
-            You of course not being the most smartest of individuals deside to set out to look for riches and glory. Of course
-            death is probably going to get the better of you.....
-          </p>
-          <p id="direction">
-            You can go north along the road
-          </p>  
-        </article>
-      </main>
 
-      <nav >
-        <ul class="nav">
-            <li id="north"><a href="#" >N</a></li>
-            <li id="east"><a href="#">E</a></li>
-            <li id="south"><a href="#">S</a></li>
-            <li id="west"><a href="#">W</a></li>
-            <li id="inventory"><span><a href="#">I</a></span>nventory</li>
-            <li id="attack"><span><a href="#">A</a></span>ttack</li>
-            <li id="pickUp"><span><a href="#">P</a></span>ick Up</li>
-            <li id="use"><span><a href="#">U</a></span>se</li>
-        </ul>
-      </nav>
-      <footer>
-        Michael R. Kline &#169; 2020<br>
-        Code can be found here on <a href="https://github.com/mikekline/The-Abandoned-Castle">Github</a> 
-      </footer>
-      <script type="module" src='./JavaScript/app.js'></script>
-    </body>
+<head>
+  <title>The Abandoned Castle</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="shortcut icon" href="./assets/Iconka-Home-Sweet-Home-Home-Castle.ico" />
+  <script src="https://kit.fontawesome.com/a2b36221ba.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- scroll -->
+  <main>
+    <!-- title -->
+    <img class="title" src="./assets/title.png" alt="the abandon castle title">
+    <!-- displayed text on scroll -->
+    <article id="article">
+      <p id="notifications"></p>
+      <p id="items"></p>
+      <p id="description">
+        The Castle stands eeriely silent as you approach. After many centuries
+        thecastle has sparked many legends. Most have never retunred, those that have speak of horors and riches.
+        You of course not being the most smartest of individuals deside to set out to look for riches and glory. Of course
+        death is probably going to get the better of you.....
+      </p>
+      <p id="direction">
+        You can go north along the road
+      </p>
+    </article>
+  </main>
+
+  <!-- navagation panel -->
+  <nav>
+    <ul>
+      <li id="north" class="compass"><a href="#">N</a></li>
+      <li id="east" class="compass"><a href="#">E</a></li>
+      <li id="south" class="compass"><a href="#">S</a></li>
+      <li id="west" class="compass"><a href="#">W</a></li>
+      <li id="inventory"><span><a href="#">I</a></span>nventory</li>
+      <li id="attack"><span><a href="#">A</a></span>ttack</li>
+      <li id="pickUp"><span><a href="#">P</a></span>ick Up</li>
+      <li id="use"><span><a href="#">U</a></span>se</li>
+    </ul>
+  </nav>
+  <footer>
+      <ul>
+        <li class="footerIcon"><a href="https://github.com/mikekline/The-Abandoned-Castle"><i class="fab fa-github fa-2x"></i></a></li>
+        <li>Michael R. Kline &#169; 2020 <br> Email: <a href="mailto:klinem@gmail.com">klinem@gmail.com</a></li>
+        <li class="footerIcon"><a href="https://www.linkedin.com/in/klinem42/"><i class="fab fa-linkedin fa-2x"></i></a></li>
+      </ul>
+  </footer>
+  <script type="text/javascript" src="./JavaScript/jquery-3.5.0.min.js"></script>
+  <script type="module" src='./JavaScript/app.js'></script>
+</body>
+
 </html>
