@@ -112,13 +112,13 @@ function selectRoom (e) {
         notifications.innerText = "As you approach the skeleton it begins to start laughing as it becomes alive and lunges towards you.";
         reset(notifications);
 
-        //bug: have to hit "a" twice to activate, math wrong
+        //bug: have to hit "a" twice to activate
         if (damage > 0 && e.keyCode === 65 || e == "a" ){
 
           const tillDead = data.skeletons.hitpoints -= damage;
           notifications.innerText = `you have done ${damage} damage to the ${data.skeletons.name}.`
           reset(notifications);
-          console.log(tillDead);
+    
           if (tillDead <= 0){
             monster = 0;
             backpack.push(data.skeletons.items);
@@ -154,8 +154,6 @@ function selectRoom (e) {
 function attack (e) {
   if (e == "a" || e.keyCode === 65){
     damage = Math.ceil(Math.random() * 10);
-    //explain why
-    selectRoom('a');
   }
 }
 
