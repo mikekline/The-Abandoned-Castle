@@ -14,9 +14,9 @@ function selectRoom (e) {
   const notifications = document.getElementById('notifications');
   const backpack = data.inventory.backpack;
 
-
+  
   switch (currentRoom){
-
+      
     case 'road':
       if (e == "n" || e.keyCode === 78 || e.keyCode === 38){
         $('#description').text(data.gate.description);
