@@ -26,5 +26,6 @@ favicon from: http://www.iconarchive.com/show/home-sweet-home-icons-by-iconka/Ho
 ## Still todo  
 - drop down menu for instructions  
 - responsive for mobile, including nav menu that slides up from bottom  
-- refactor of rooms in switch to functions for better reusable modular code  
+- refactor of rooms in switch to functions for better reusable modular code 
+- complete combat system  
 - many other features to turn into a fully fleshed out game  
