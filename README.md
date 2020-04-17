@@ -20,5 +20,11 @@ All coding and the title done by me.
 Images are from the following sources:  
 background image from: https://www.shutterstock.com/image-illustration/halloween-dark-castle-full-moon-wallaper-1534240883  
 compass from: http://clipart-library.com/clipart/rTLnpe6jc.htm   
-edit scroll from:  http://www.clker.com/clipart-456835.html   
+edited scroll from:  http://www.clker.com/clipart-456835.html   
 favicon from: http://www.iconarchive.com/show/home-sweet-home-icons-by-iconka/Home-Castle-icon.html   
+
+## Still todo  
+- drop down menu for instructions  
+- responsive for mobile, including nav menu the slides up from bottom  
+- refactor rooms in switch to functions for better reusable modular code  
+- many other fetures to turn into a fully fleshed out game  

@@ -25,7 +25,7 @@ body {
 }
 
 main {
-  background-image: url('../assets/15137538271897643057blank-scroll-wallpaper.hi_95.png');
+  background-image: url('../assets/15137538271897643057blank-scroll-wallpaper.hi.png');
   background-repeat: no-repeat;
   background-size: 46vw 80vh;
   display: flex;
@@ -166,6 +166,27 @@ span {
   justify-self: end;
   align-self: center;
 }
+
+
+/*********************************************/
+/*         End of demo display box           */
+/*********************************************/
+
+#end {
+  display: none;
+  position: absolute;
+  margin: -10vh auto;
+  padding: 2vh 4vw;
+  height: 20vh;
+  width:20vw;
+  background-color: aliceblue;
+  border-radius: 20px;
+  border: 2px solid gold;
+  box-shadow: 3px 3px 6px black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5vw;
+}
+
 
 /*********************************************/
 /*                   Footer                  */

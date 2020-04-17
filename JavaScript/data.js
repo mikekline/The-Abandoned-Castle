@@ -44,7 +44,7 @@ const dungeon = {
 const cave = {
     type:"room",
     name:"Cave",
-    description:"Apon entering the cave, your eyes ajust to the light coming in from the mouth of the cave. It appears the cave opens up over a valley that exteneds to the mountains.",
+    description:"Apon entering the cave, your eyes ajust to the light coming in from the mouth of the cave. It appears the cave opens up over a valley that exteneds to the mountains. You have reached the end of the beginning, press 'enter' to end.",
     directions:"You can go west"
 }
 
