@@ -16,9 +16,9 @@ To veiw what is in your inventory press the "i" key, to attack an enemy press
 the "a" key, to pick up/interact with an item and put it in your inventory press the "p" key, and to use an item in your inventory press the "u" key.You can also click on any of the I,A,P,U letters in the navigation window.
 
 ## Credits
-All coding and the title done by me.
-images are from the following sources:
-background image from: https://www.shutterstock.com/image-illustration/halloween-dark-castle-full-moon-wallaper-1534240883
-compass from: http://clipart-library.com/clipart/rTLnpe6jc.htm
-edit scroll from:  http://www.clker.com/clipart-456835.html
-favicon from: http://www.iconarchive.com/show/home-sweet-home-icons-by-iconka/Home-Castle-icon.html
+All coding and the title done by me.  
+Images are from the following sources:  
+background image from: https://www.shutterstock.com/image-illustration/halloween-dark-castle-full-moon-wallaper-1534240883  
+compass from: http://clipart-library.com/clipart/rTLnpe6jc.htm   
+edit scroll from:  http://www.clker.com/clipart-456835.html   
+favicon from: http://www.iconarchive.com/show/home-sweet-home-icons-by-iconka/Home-Castle-icon.html   
