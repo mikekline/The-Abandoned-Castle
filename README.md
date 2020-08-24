@@ -1,6 +1,6 @@
 # The-Abandoned-Castle 
 (A Text adventure proof of concept)  
-(http://mkline.org/school/the_abandoned_castle/index.html)
+http://mkline.org/school/the_abandoned_castle/index.html
 
 
 Hello welcome to the abandoned castle. This is a proof of concept done 
