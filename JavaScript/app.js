@@ -6,7 +6,7 @@
   player input to navigation, combat and inventory control
 	*/
 
-  import * as data from './data.js';
+import * as data from './data.js';
 
 let currentRoom = "road";
 let gate = 0;
@@ -19,6 +19,7 @@ let monster = 1;
 /*              room navigation              */
 /*********************************************/
 /* alows navagation between rooms */
+
 function selectRoom (e) {
   const notifications = document.getElementById('notifications');
   const backpack = data.inventory.backpack;
@@ -26,6 +27,7 @@ function selectRoom (e) {
   
   switch (currentRoom){
       
+
     case 'road':
       if (e === "n" || e.keyCode === 78 || e.keyCode === 38){
         $('#description').text(data.gate.description);
@@ -33,6 +35,8 @@ function selectRoom (e) {
         currentRoom = 'Front Gate';
       }
     break;
+
+
 
     case 'Front Gate':
     /* player interaction with the  welcome mat */
@@ -59,6 +63,8 @@ function selectRoom (e) {
     }
     break;
 
+
+
     case 'Courtyard':
       if (e === "n" || e.keyCode === 78 || e.keyCode === 38){
         $('#description').text(data.banquet.description);
@@ -79,6 +85,9 @@ function selectRoom (e) {
       }
     break;
 
+
+
+
     case 'Stables':
       if (e === "e" || e.keyCode === 69 || e.keyCode === 39){
         $('#description').text(data.courtYard.description);
@@ -86,6 +95,9 @@ function selectRoom (e) {
         currentRoom = 'Courtyard';
       }
     break;
+
+
+
 
     case 'Banquet Room':
       if (e === "n" || e.keyCode === 78 || e.keyCode === 38){
@@ -99,6 +111,8 @@ function selectRoom (e) {
       }
     break;
 
+
+
     case 'Kitchen':
       if (e === "s" || e.keyCode === 83 || e.keyCode === 40){
         $('#description').text(data.banquet.description);
@@ -106,6 +120,8 @@ function selectRoom (e) {
         currentRoom = 'Banquet Room';
       }
     break;
+
+
 
     case 'Dungeon':
       if (e === "w" || e.keyCode === 87 || e.keyCode === 37){
@@ -121,7 +137,7 @@ function selectRoom (e) {
         notifications.innerText = "As you approach the skeleton it begins to start laughing as it becomes alive and lunges towards you.";
         reset(notifications);
         /* combat logic to damage monster and move on to the next room, (refactor so mostly comes under compat function) */
-        //bug: have to hit "a" twice to activate
+        //bugs: have to hit "a" twice to activate, does not work with on click of attack, will not work on moble will have to refactor
         if (damage > 0 && e.keyCode === 65 || e === "a" ){
 
           const tillDead = data.skeletons.hitpoints -= damage;
@@ -142,6 +158,8 @@ function selectRoom (e) {
       };
     break;
 
+
+
     case 'Cave':
       if (e === "w" || e.keyCode === 87 || e.keyCode === 37){
         $('#description').text(data.dungeon.description);
@@ -154,25 +172,33 @@ function selectRoom (e) {
       }
     break;
 
+
+
     default:
         $('#article').text("you are lost, find your way back to the light");
     break;
   }
 }
 
+
+
 /*********************************************/
 /*                  combat                   */
 /*********************************************/
 /* to calculate damage to a monster */
+
 function attack (e) {
   if (e === "a" || e.keyCode === 65){
     damage = Math.ceil(Math.random() * 10);
   }
 }
 
+
+
 /*********************************************/
 /*               inventory                   */
 /*********************************************/
+
 
 function inventory (e) {
   const inventory = document.getElementById('items');
@@ -195,6 +221,8 @@ function inventory (e) {
   }
 }
 
+
+
 /*********************************************/
 /*            input controllers              */
 /*********************************************/
@@ -212,6 +240,7 @@ $('#inventory').click(function(){inventory('i')});
 $('#attack').click(function(){attack('a')});
 $('#pickUp').click(function(){selectRoom('p')});
 $('#use').click(function(){inventory('u')});
+
 
 
 /*********************************************/
